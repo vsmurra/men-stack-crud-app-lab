@@ -1,0 +1,14 @@
+<h1>All Planets</h1>
+<a href="/planets/new">Add a new planet</a>
+
+<ul>
+  <% planets.forEach(planet => { %>
+    <li>
+      <a href="/planets/<%= planet._id %>"><%= planet.name %></a>
+      <form action="/planets/<%= planet._id %>?_method=DELETE" method="POST" style="display:inline;">
+        <button>Delete</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>
+<a href="/">Back to home page</a>

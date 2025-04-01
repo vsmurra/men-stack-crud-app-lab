@@ -1,0 +1,9 @@
+<h1>Edit <%= planet.name %></h1>
+<form action="/planets/<%= planet._id %>?_method=PUT" method="POST">
+  <label>Name: <input type="text" name="name" value="<%= planet.name %>"></label><br>
+  <label>Distance from Sun: <input type="number" name="distanceFromSun" value="<%= planet.distanceFromSun %>"></label><br>
+  <label>Has Life? <input type="checkbox" name="hasLife" <%= planet.hasLife ? "checked" : "" %>></label><br>
+  <label>Image URL: <input type="text" name="image" value="<%= planet.image %>"></label><br>
+  <button type="submit">Update Planet</button>
+</form>
+<a href="/planets/<%= planet._id %>">Cancel</a>

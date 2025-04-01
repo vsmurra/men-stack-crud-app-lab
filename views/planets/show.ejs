@@ -1,0 +1,9 @@
+<h1><%= planet.name %></h1>
+<p>Distance from Sun: <%= planet.distanceFromSun %> million km</p>
+<p>Has Life: <%= planet.hasLife ? "Yes" : "No" %></p>
+<img src="<%= planet.image %>" alt="<%= planet.name %>" width="200">
+<br><br>
+<a href="/planets/<%= planet._id %>/edit">Edit this planet</a><br>
+<a href="/planets">Back to all planets</a>
+<br>
+<a href="/">Back to home page</a>
